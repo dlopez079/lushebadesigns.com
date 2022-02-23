@@ -11,6 +11,8 @@
         "laravel/jetstream": "^2.6",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
+        "laravel/vapor-cli": "^1.36",
+        "laravel/vapor-core": "^2.20",
         "livewire/livewire": "^2.5"
     },
     "require-dev": {
