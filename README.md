@@ -1,64 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Project Title
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Lusheba Designs. is a full CRUD website that I am creating using Laravel 8, Jetstream, Livewire, and MySQL.  The environment is built on docker containers which will be managed by Laravel Sail.  I currently have a Windows environment therefore, I have WSL2.0 to help deliver the Ubuntu platform that allows me to work Linux which a developers perferred operating system. Finally, to deploy I use a serverless environment with Laravel Vapor and AWS.
 
-## About Laravel
+## Getting Started
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Prerequisites
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Before working with Laravel, your Visual Studio Code (Not Visual Studio 2022) application must have `Remote - WSL` extension installed. Once you are connected with Visual Studio Code and the Remote - WSL, connect to the Linux Distribution by clicking on `WSL` on bottome left of the `Visual Studio Code`.
 
-## Learning Laravel
+Figure out where you would like to save your project and run the following installation command.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
+curl -s https://laravel.build/example-app | bash   
+```
+* Remember to replace 'example-app with the name of your application.  This is done when you are creating the project for the first time. 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Installing
 
-## Laravel Sponsors
+Once you run the above code, Laravel will create a scaffolding like no other.  You will have a well organized project.  Some may be indimidated but some may welcome what you see. 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+cd example-app
 
-### Premium Partners
+./vendor/bin/sail up
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Navigate to:
+
+```
+ http://localhost
+```
+And just like that you have a site up. 
+
+
+Laravel has the power to bring you management capabilities withing one framework which primarily uses blade.
+
+
+## Deployment
+
+!IMPORTANT: IF YOU ARE CLONING THIS PROJECT, MAKE SURE YOU HAVE THE ENV FILE IN YOUR PROJECT.
+THEN YOU MUST USE THE FOLLOWING CODE INSIDE THE PROJECT FOLDER BEFORE YOU RUN ANYTHING!!!
+USE THE VERSION OF PHP THAT THE PROJECT WAS CREATED WITH!
+
+If you notice in the code below, there is a php81 on line 5.  Change that number to 74 (for PHP 7.4), 80 (for PHP 8.0) and 81 (for PHP 8.1).
+
+```
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqs
+
+```
+
+## Built With
+
+* [LARAVEL 8](https://laravel.com/docs/8.x/sail)
+* [JETSTREAM](https://jetstream.laravel.com/2.x/introduction.html)
+* [LIVEWIRE](https://laravel-livewire.com/)
+* [SAIL](https://laravel.com/docs/8.x/sail)
+* [LARAVEL VAPOR](https://docs.vapor.build/1.0/introduction.html)
+* [TAILWINDCSS](https://tailwindcss.com/docs/installation)
+* [ALPHINEJS](https://laravel-livewire.com/docs/2.x/alpine-js)
+
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Code of Conduct
+## Versioning
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+We use [SemVer](http://semver.org/) for versioning.
 
-## Security Vulnerabilities
+## Authors
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* **David Lopez** - *Initial work* - [David Lopez](https://github.com/dlopez079)
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* I gotta acknowledge the Laravel team and their endless amount of solutions for developers.  They made this journey so much fun for me.  I started this venture so frustrated and now I couldn't be more happier.  I can't wait to develop some more public projects. 
