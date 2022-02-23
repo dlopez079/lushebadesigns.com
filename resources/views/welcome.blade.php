@@ -19,11 +19,11 @@
         
     </head>
     <body>
-        <livewire:hero />
-        <!-- <livewire:gallery /> -->
-        <livewire:services />
-        <livewire:about />
-        <livewire:contact-form />
+        @livewire('hero-section')
+        @livewire('gallery-section')
+        @livewire('services-section')
+        @livewire('about-section')
+        @livewire('contact-section')
 
         @livewireScripts
         
