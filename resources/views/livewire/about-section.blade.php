@@ -1,4 +1,4 @@
-<section id="about" class="relative bg-white py-12 sm:py-16">
+<section id="about" class="relative bg-white py-12">
     <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
         <div class="relative sm:py-16 lg:py-0">
             <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
