@@ -59,14 +59,7 @@
 
                         <a href="#contact" class="font-medium text-gray-500 hover:text-gray-900">Contact Us</a>
                     </div>
-                    <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                        <span class="inline-flex rounded-md shadow">
-                            <a href="#"
-                                class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50">
-                                Log in
-                            </a>
-                        </span>
-                    </div>
+
                 </nav>
             </div>
 
