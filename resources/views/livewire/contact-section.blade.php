@@ -3,11 +3,11 @@
         <div class="divide-y-2 divide-gray-200">
 
             {{-- GET In touch --}}
-            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-                <div>
+            <div class="text-center lg:grid lg:grid-cols-2 lg:gap-8">
+                <div class="p-2">
                     <h2 class="text-2xl font-extrabold text-white sm:text-3xl">Get in Touch</h2>
                 </div>
-                <div>
+                <div class="p-2">
                     <h3 class="text-lg leading-6 font-medium text-white">Nikolai Designs Systems dba Lusheba Designs</h3>
                     <dl class="mt-2 text-base text-white">
                         <div>
